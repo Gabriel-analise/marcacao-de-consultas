@@ -1,0 +1,1 @@
+<img src="{{ asset('images/doutor.png') }}" alt="ícone" width=20%>
