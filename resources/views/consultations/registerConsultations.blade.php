@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('layouts.title')
 <link rel="stylesheet" href="{{ asset('css/registerPatients.css') }}">
 
 @section('content')
@@ -40,7 +40,7 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="numero">{{ __('Data da consulta') }}</label>
                                 <input id="dataConsulta" type="date" class="form-control" name="data_consulta" required>
