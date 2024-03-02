@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@extends('layouts.title')
+@include('layouts.title')
 <link rel="stylesheet" href="{{ asset('css/registerPatients.css') }}">
 
 @section('content')

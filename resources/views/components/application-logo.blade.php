@@ -1,1 +1,1 @@
-<img src="{{ asset('images/doutor.png') }}" alt="ícone" width=20%>
+<img src="{{ asset('images/doutor.png') }}" title="Voltar" alt="ícone" width=20%>
