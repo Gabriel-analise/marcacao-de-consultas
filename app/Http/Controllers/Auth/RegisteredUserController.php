@@ -53,13 +53,14 @@ class RegisteredUserController extends Controller
          * @var \Illuminate\Validation\Validator $validator
          */
         $validator = Validator::make($request->all(), [
-            'nome' => 'required|string|max:255',
+            'nome' => 'required|string|max:255',    
             'email' => 'required|string|email|max:255|unique:cls_usuarios',
             'senha' => 'required|string|min:8',
-            'confirmacao_senha' => 'required|string|min:8|same:senha',
+            'confirmacao_senha' => 'required|string|same:senha',
         ], [
-            'confirmacao_senha.same' => 'Password confirmation does not match',
-            'senha.min' => 'Password field must be at least 8 characters',
+            'email.unique' => 'Já existe uma conta com este e-mail cadastrado',
+            'senha.min' => 'A senha deve conter no mínimo 8 caracteres',
+            'confirmacao_senha.same' => 'A confirmação deve ser idêntica a senha',
         ]);
 
         /**

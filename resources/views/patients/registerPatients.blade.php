@@ -94,12 +94,10 @@
                                 <label for="nome">{{ __('Nome') }}</label>
                                 <input id="nome" type="text" class="form-control" name="nome_paciente" required autofocus>
                             </div>
-
                             <div class="form-group">
                                 <label for="cpf">{{ __('CPF') }}</label>
                                 <input id="cpf" type="text" class="form-control cpf" name="cpf_paciente" required>
                             </div>
-                            
                             <label for="telefone">{{ __('Telefone') }}</label>
                             <div id="inputs-container">
                                 <div class="input-wrapper">
@@ -107,33 +105,26 @@
                                     <span class="add-input" title="Adicionar telefone" onclick="addInput()">+</span>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label for="email">{{ __('Email') }}</label>
                                 <input id="email" type="email" class="form-control" name="email_paciente" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="cep">{{ __('CEP') }}</label>
                                 <input id="cep" type="text" class="form-control" name="cep_paciente" onblur=pesquisacep(this.value); required>
                             </div>
-
                             <div class="form-group">
                                 <label for="endereco">{{ __('Endereço') }}</label>
                                 <input id="endereco" type="text" class="form-control" name="endereco_paciente" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="numero">{{ __('Número') }}</label>
                                 <input id="numero" type="text" class="form-control" name="numero_paciente" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="numero">{{ __('Data de nascimento') }}</label>
                                 <input id="dataNascimento" type="date" class="form-control" name="data_nascimento" onchange="verificarIdade()" required>
-                            </div>
-
-                            
+                            </div>                            
                             <div class="form-group" style="display: none" id="responsavelNome">
                                 <label for="nomeResponsavel">{{ __('Nome do responsável') }}</label>
                                 <input id="nomeResponsavel" type="text" class="form-control" name="nome_responsavel" autofocus>
@@ -157,13 +148,12 @@
 @endsection
 
 <script>
-        $(document).ready(function () {
-            $('.cpf').inputmask('999.999.999-99', { removeMaskOnSubmit: true });
-            $('#telefone').inputmask('(99) 99999-9999', { removeMaskOnSubmit: true });
-            $('#cep').inputmask('99999-999', { removeMaskOnSubmit: true });
+    $(document).ready(function () {
+        $('.cpf').inputmask('999.999.999-99', { removeMaskOnSubmit: true });
+        $('#telefone').inputmask('(99) 99999-9999', { removeMaskOnSubmit: true });
+        $('#cep').inputmask('99999-999', { removeMaskOnSubmit: true });
 
-        });
-
+    });
 
     function addInput() {
         const inputsContainer = document.getElementById('inputs-container');
@@ -185,7 +175,6 @@
         inputWrapper.appendChild(plusSign);
         inputsContainer.appendChild(inputWrapper);
     }
-
 
     function verificarIdade() {
         const dataNascimentoInput = document.getElementById('dataNascimento');
@@ -213,8 +202,6 @@
             }
         }
     }
-
-
 </script>
 
 

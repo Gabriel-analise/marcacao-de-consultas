@@ -17,8 +17,7 @@ body {
     background-color: #778899;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    margin: 20px;
+    padding: 2% 0 0 0;
     width: 80%;
     height: 80%;
     max-width: 80%;
@@ -77,10 +76,11 @@ p {
 
 .benefits-list {
     overflow: hidden;
-    width: 45%;
+    width: 96rem;
 }
 
 .carousel {
+    width: 98rem;
     display: inline-block;
 
 }

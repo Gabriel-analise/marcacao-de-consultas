@@ -32,7 +32,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
     Route::get('/registerPatients', [PatientController::class, 'create'])->name('patients.register');
     Route::post('/registerPatients', [PatientController::class, 'store'])->name('patients.store');
 
@@ -42,14 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/registerSpecialtys', [SpecialtyController::class, 'create'])->name('specialtys.register');
     Route::post('/registerSpecialtys', [SpecialtyController::class, 'store'])->name('specialtys.store');
 
-
     Route::get('/registerConsultations', [ConsultationController::class, 'indexAndCreate'])->name('consultations.indexAndCreate');
     Route::post('/registerConsultations', [ConsultationController::class, 'store'])->name('consultations.store');
-
-
 });
-
-
-
 
 require __DIR__.'/auth.php';
