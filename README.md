@@ -30,26 +30,33 @@ Este é um projeto de marcação de consultas desenvolvido com o framework Larav
 Execute o comando abaixo para instalar as dependências do projeto:
 
 `composer install`
+e
+`npm install` 
 
-**Passo 3: Configurar o Arquivo .env**
+**Passo 3: compilar os assets do JavaScript**
+
+Dev: `npm run dev` 
+Prod: `npm run prod` 
+
+**Passo 4: Configurar o Arquivo .env**
 
 Copie o arquivo `.env.example` para `.env` e atualize as informações de configuração, como a conexão com o banco de dados e as credenciais de email:
 
 `cp .env.example .env`
 
-**Passo 4: Gerar a Chave da Aplicação**
+**Passo 5: Gerar a Chave da Aplicação**
 
 Gere uma chave única para a aplicação Laravel com o comando:
 
 `php artisan key:generate`
 
-**Passo 5: Migrar o Banco de Dados**
+**Passo 6: Migrar o Banco de Dados**
 
 Execute as migrações para configurar o banco de dados:
 
 `php artisan migrate`
 
-**Passo 6: Servir a Aplicação**
+**Passo 7: Servir a Aplicação**
 
 Inicie o servidor de desenvolvimento para acessar a aplicação localmente:
 
