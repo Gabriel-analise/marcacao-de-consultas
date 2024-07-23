@@ -1,30 +1,38 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #2c3e50, #1f2f3a);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url(/images/backDoc.jpg);
+    background: url('/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;  
+    padding: 20px;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .container {
-    background-color: #778899;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding: 2% 0 0 0;
-    width: 80%;
-    height: 80%;
-    max-width: 80%;
-    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -44,13 +52,14 @@ p {
 
 .options {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 4%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4%;
 }
 
 .btn {
     display: inline-block;
+    width: auto;
     padding: 15px 30px;
     margin: 10px;
     text-decoration: none;
@@ -76,14 +85,17 @@ p {
 
 .benefits-list {
     overflow: hidden;
-    width: 96rem;
+    width: inherit;
+    height: 100%;
 }
 
 .carousel {
-    width: 98rem;
     display: inline-block;
-
+    width: 100%;
+    height: 9%;
+    margin-top: 3%;
 }
+
 .wrapper {
     display: grid;
     grid-auto-flow: column;
@@ -95,12 +107,43 @@ p {
     height: 50%;
     object-fit: cover;
     width: auto;
-
 }
-
 
 @keyframes scroll {
     to {
         translate: calc(-2 * 15rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .glass {
+        padding: 15px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .wrapper {
+        grid-auto-columns: 10rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }
